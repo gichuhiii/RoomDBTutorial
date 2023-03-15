@@ -15,4 +15,5 @@ interface ScheduleDao {
     //select all columns where results match selected stop name in the schedule table
     @Query("SELECT * FROM schedule WHERE stop_name = :stopName ORDER BY arrival_time ASC")
     fun getByStopName(stopName: String): Flow<List<Schedule>>
+
 }
